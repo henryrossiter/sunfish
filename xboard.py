@@ -1,4 +1,4 @@
-#!/usr/bin/env pypy -u
+#!/usr/bin/env python -u
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
@@ -34,7 +34,7 @@ def main():
     sys.stdout = tools.Unbuffered(sys.stdout)
 
     now = datetime.now()
-    path = 'sunfish-' + now.strftime("%d:%m:%Y-%H:%M:%S:%f") + '.log'
+    path = 'sunfish-' + now.strftime("%d.%m.%Y-%H.%M.%S") + '.log'
     sys.stderr = open(path, 'a')
 
     pos = tools.parseFEN(tools.FEN_INITIAL)
